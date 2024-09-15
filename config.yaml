@@ -1,0 +1,22 @@
+common:
+  use_cuda: !!bool False #card màn hình
+  path_checkpoint: './checkpoints' #floder chứa checkpoint
+  name_checkpoint: 'best_checkpoint' #ten model 
+  path_logger: './training-logs' #log chi so
+
+data:
+  data_path: './data/data.xlsx'
+  tab_name: 'Content'
+
+model:
+  model_name: 'VietAI/vit5-base'
+  max_length: 100
+
+
+train:
+  learning_rate: 1e-5 
+  epochs: 20
+  loops: 100
+  train_test_split: 0.2
+  batch_size: 2 #card
+  top_k: 1
